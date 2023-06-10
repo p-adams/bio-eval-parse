@@ -7,4 +7,8 @@ declare namespace Lib {
   interface ParsedBiographicalEntry extends RawBiographicalEntry {
     name: string;
   }
+
+  interface SymbolMap {
+    [key: string]: string;
+  }
 }
