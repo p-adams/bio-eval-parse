@@ -7,5 +7,5 @@ export const nameFromSymbol = (symbol: string): string => {
 export function parseBiographicalEntry(
   _biographicalEntry: Lib.RawBiographicalEntry
 ): Lib.ParsedBiographicalEntry {
-  return { id: "", data: "", name: "" };
+  return { id: "", data: "", identity: { name: "" } };
 }
