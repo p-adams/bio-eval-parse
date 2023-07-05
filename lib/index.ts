@@ -4,8 +4,22 @@ export const nameFromSymbol = (symbol: string): string => {
   return map[symbol];
 };
 
-export function parseBiographicalEntry(
+function _parseBiographicalEntry(
   _biographicalEntry: Lib.RawBiographicalEntry
-): Lib.ParsedBiographicalEntry {
+): Lib.ParsedBiographicalEntryFields {
   return { id: "", data: "", identity: { name: "" } };
 }
+
+export function createBiographicalEntry({
+  entry,
+}: {
+  entry: Lib.ParsedBiographicalEntryFields;
+}): Lib.CreatedBiographicalEntry {
+  return { entry };
+}
+
+/**
+ * const a1 = createBiographicalEntry({
+  entry: { id: "", data: "", identity: { name: "" } },
+});
+ */

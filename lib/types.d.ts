@@ -4,7 +4,7 @@ declare namespace Lib {
     data: string;
   }
 
-  interface ParsedBiographicalEntry extends RawBiographicalEntry {
+  interface ParsedBiographicalEntryFields extends RawBiographicalEntry {
     identity: Identity;
     // TODO: create ranking, era, type
     ranking?: string;
@@ -25,5 +25,9 @@ declare namespace Lib {
 
   interface SymbolMap {
     [key: string]: string;
+  }
+
+  interface CreatedBiographicalEntry {
+    entry: ParsedBiographicalEntryFields;
   }
 }
