@@ -17,27 +17,3 @@ export function createBiographicalEntry({
 }): Lib.CreatedBiographicalEntry {
   return { entry };
 }
-/**
- * {
-    "id": "1",
-    "data": "أحمد ابن إبراهيم ابن خالد الموصلي أبو علي نزيل بغداد صدوق من العاشرة مات سنة ست وثلاثين د فق"
-  }
- */
-/**
- * const a1 = createBiographicalEntry({
-  entry: { id: "1",
-  data: "أحمد ابن إبراهيم ابن خالد الموصلي أبو علي نزيل بغداد صدوق من العاشرة مات سنة ست وثلاثين د فق", 
-  identity: {
-    name: "أحمد ابن إبراهيم ابن خالد",
-    affiliation: "الموصلي",
-    teknonym: "أبو علي",
-    expansions: ["نزيل بغداد"],
-  },
-  era: {
-    strata: "من العاشرة",
-    date: " مات سنة ست وثلاثين "
-  },
-  narrators: ["فق","د"]
-},
-});
- */

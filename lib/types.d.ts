@@ -9,7 +9,7 @@ declare namespace Lib {
     // TODO: create ranking, era, type
     ranking?: string;
     era?: Era;
-    narrators?: SymbolMap;
+    narrators?: Array<string>;
   }
 
   interface Identity {
