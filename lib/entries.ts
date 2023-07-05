@@ -13,7 +13,7 @@ export const biographicalEntries: Array<Lib.CreatedBiographicalEntry> = [
       data: "أحمد ابن إبراهيم ابن خالد الموصلي أبو علي نزيل بغداد صدوق من العاشرة مات سنة ست وثلاثين د فق",
       identity: {
         name: "أحمد ابن إبراهيم ابن خالد",
-        affiliation: "الموصلي",
+        affiliations: ["الموصلي"],
         teknonym: "أبو علي",
         expansions: ["نزيل بغداد"],
       },
@@ -35,10 +35,9 @@ export const biographicalEntries: Array<Lib.CreatedBiographicalEntry> = [
       data: "أحمد ابن إبراهيم ابن فيل باسم الحيوان المعروف أبو الحسن البالسي نزيل أنطاكية صدوق من الثانية عشرة مات سنة أربع وثمانين كن",
       identity: {
         name: "أحمد ابن إبراهيم ابن فيل",
-        affiliation: "البالسي",
+        affiliations: ["البالسي"],
         teknonym: "أبو الحسن",
         expansions: ["باسم الحيوان", "نزيل أنطاكية"],
-        nickname: "المعروف أبو الحسن البالسي",
       },
       ranking: "صدوق",
       era: {

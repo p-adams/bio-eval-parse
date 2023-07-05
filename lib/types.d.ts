@@ -16,7 +16,7 @@ declare namespace Lib {
     name: string;
     lineage?: Array<string>;
     teknonym?: string;
-    affiliation?: string;
+    affiliations?: Array<string>;
     nickname?: string;
     // Provides supplementary information about a person's name to ensure accuracy
     // or to account for variations in spelling or pronunciation
