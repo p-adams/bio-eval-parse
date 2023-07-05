@@ -8,7 +8,7 @@ declare namespace Lib {
     identity: Identity;
     // TODO: create ranking, era, type
     ranking?: string;
-    era?: string;
+    era?: Era;
     narrators?: SymbolMap;
   }
 
@@ -20,7 +20,12 @@ declare namespace Lib {
     nickname?: string;
     // Provides supplementary information about a person's name to ensure accuracy
     // or to account for variations in spelling or pronunciation
-    name_expansion?: string;
+    expansions?: Array<string>;
+  }
+
+  interface Era {
+    strata: string;
+    date: string;
   }
 
   interface SymbolMap {
