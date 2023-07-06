@@ -28,6 +28,12 @@ declare namespace Lib {
     date: string;
   }
 
+  interface BiographicalChapters {
+    alif: {
+      ahmad: Array<CreatedBiographicalEntry>;
+    };
+  }
+
   interface SymbolMap {
     [key: string]: string;
   }

@@ -11,5 +11,8 @@ Deno.test("nameFromSymbol", () => {
 });
 
 Deno.test("createBiographicalEntry", () => {
-  assertEquals("من العاشرة", biographicalEntries[0].entry.era?.strata);
+  assertEquals(
+    "من العاشرة",
+    biographicalEntries.alif.ahmad[0].entry.era?.strata
+  );
 });
