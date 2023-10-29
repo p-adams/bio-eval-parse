@@ -12,10 +12,20 @@ export const nameFromSymbol = (symbol: string): string => {
   return symbolMap[symbol];
 };
 
-function _parseBiographicalEntry(
-  _biographicalEntry: Lib.RawBiographicalEntry
+export function parseBiographicalEntry(
+  biographicalEntry: Lib.RawBiographicalEntry
 ): Lib.ParsedBiographicalEntryFields {
-  return { id: "", data: "", identity: { name: "" } };
+  const [id, rawData] = biographicalEntry.data;
+  // TODO: extract entries from raw data by spliting string by "/" to get
+  // name field, ranking, era, and narrators data
+  const _$data = rawData.split("/");
+
+  const entry: Lib.ParsedBiographicalEntryFields = {
+    id: id,
+    data: "",
+    identity: { name: "" },
+  };
+  return entry;
 }
 
 export function createBiographicalEntry({

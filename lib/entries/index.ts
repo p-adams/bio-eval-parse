@@ -1,4 +1,4 @@
-import { createBiographicalEntry } from "./index.ts";
+import { createBiographicalEntry } from "../index.ts";
 
 export const biographicalEntries: Lib.BiographicalChapters = {
   alif: {
