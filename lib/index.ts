@@ -36,7 +36,7 @@ export function parseBiographicalEntry(
   const entry: Lib.ParsedBiographicalEntryFields = {
     id: id,
     // expose raw entry
-    data: $data.join("/").replaceAll("/", ""),
+    data: data.replaceAll("/", "").replaceAll("|", ""),
     identity: { name: identity },
     ranking: $ranking,
     era: $era,
