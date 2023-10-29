@@ -15,14 +15,15 @@ export const nameFromSymbol = (symbol: string): string => {
 export function parseBiographicalEntry(
   biographicalEntry: Lib.RawBiographicalEntry
 ): Lib.ParsedBiographicalEntryFields {
-  const [id, rawData] = biographicalEntry.data;
+  const { id, data } = biographicalEntry;
   // TODO: extract entries from raw data by spliting string by "/" to get
   // name field, ranking, era, and narrators data
-  const _$data = rawData.split("/");
+  const $data = data.split("/");
 
   const entry: Lib.ParsedBiographicalEntryFields = {
     id: id,
-    data: "",
+    // expose raw entry
+    data: $data.join("/").replaceAll("/", ""),
     identity: { name: "" },
   };
   return entry;

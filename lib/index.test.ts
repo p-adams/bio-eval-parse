@@ -1,9 +1,15 @@
 import { assertEquals } from "https://deno.land/std@0.191.0/testing/asserts.ts";
-import { nameFromSymbol } from "./index.ts";
+import { nameFromSymbol, parseBiographicalEntry } from "./index.ts";
 import { biographicalEntries } from "./entries/index.ts";
 
 Deno.test("parseBiographicalEntry", () => {
-  assertEquals(4, 2 + 2);
+  assertEquals(
+    parseBiographicalEntry({
+      id: "10",
+      data: " أحمد ابن إشكاب الحضرمي أبو عبد الله الصفار واسم إشكاب مجمع وهو بكسر الهمزة بعدها معجمة/ ثقة حافظ/ من الحادية عشرة| مات سنة سبع عشرة أو بعدها/ خ",
+    }).id,
+    "10"
+  );
 });
 
 Deno.test("nameFromSymbol", () => {
