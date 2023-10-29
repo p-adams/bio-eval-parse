@@ -4,6 +4,12 @@ declare namespace Lib {
     data: string;
   }
 
+  /**
+   * Separators:
+   * "/أحمد ابن إبراهيم ابن خالد الموصلي أبو علي نزيل بغداد/ صدوق/ من العاشرة مات سنة ست وثلاثين/ د فق"
+   * const [name, ranking, era, narrators] = data.split("/");
+   */
+
   interface ParsedBiographicalEntryFields extends RawBiographicalEntry {
     identity: Identity;
     // TODO: create ranking, era, type
@@ -13,6 +19,7 @@ declare namespace Lib {
   }
 
   interface Identity {
+    // For MVP: record all lineage, teknonym, affiliations, nickname, and expansion in the 'name' property
     name: string;
     lineage?: Array<string>;
     teknonym?: string;
