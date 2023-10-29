@@ -3,13 +3,12 @@ import { nameFromSymbol, parseBiographicalEntry } from "./index.ts";
 import { biographicalEntries } from "./entries/index.ts";
 
 Deno.test("parseBiographicalEntry", () => {
-  assertEquals(
-    parseBiographicalEntry({
-      id: "10",
-      data: " أحمد ابن إشكاب الحضرمي أبو عبد الله الصفار واسم إشكاب مجمع وهو بكسر الهمزة بعدها معجمة/ ثقة حافظ/ من الحادية عشرة| مات سنة سبع عشرة أو بعدها/ خ",
-    }).id,
-    "10"
-  );
+  const rawEntry = parseBiographicalEntry({
+    id: "10",
+    data: " أحمد ابن إشكاب الحضرمي أبو عبد الله الصفار واسم إشكاب مجمع وهو بكسر الهمزة بعدها معجمة/ ثقة حافظ/ من الحادية عشرة| مات سنة سبع عشرة أو بعدها/ خ",
+  });
+  assertEquals(rawEntry.id, "10");
+  assertEquals(rawEntry.narrators?.[0], "خ");
 });
 
 Deno.test("nameFromSymbol", () => {

@@ -7,16 +7,16 @@ declare namespace Lib {
   /**
    * Separators:
    * "/أحمد ابن إبراهيم ابن خالد الموصلي أبو علي نزيل بغداد/ صدوق/ من العاشرة| مات سنة ست وثلاثين/ د فق"
-   * const [name, ranking, era, narrators] = data.split("/");
+   * const [identity, ranking, era, narrators] = data.split("/");
    * const [strata, date] era.split("|")
    */
 
   interface ParsedBiographicalEntryFields extends RawBiographicalEntry {
     identity: Identity;
     // TODO: create ranking, era, type
-    ranking?: string;
-    era?: Era;
-    narrators?: Array<string>;
+    ranking?: string | null;
+    era?: Era | null;
+    narrators?: Array<string> | null;
   }
 
   interface Identity {
