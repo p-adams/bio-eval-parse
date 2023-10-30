@@ -20,9 +20,9 @@ export function parseBiographicalEntry(
   const $data = data.split("/");
 
   const [identity, ranking, era, narrators] = $data;
-  const $ranking: string | null = ranking ?? null;
+  const $ranking: string | null = ranking.trim() ?? null;
   const $era: Lib.Era | null = era
-    ? { strata: era.split("|")[0], date: era.split("|")[1] }
+    ? { strata: era.split("|")[0].trim(), date: era.split("|")[1].trim() }
     : null;
   const $narrators: string[] | null = narrators
     ? // process narrators
@@ -35,8 +35,8 @@ export function parseBiographicalEntry(
   const entry: Lib.ParsedBiographicalEntryFields = {
     id: id,
     // expose raw entry
-    data: data.replaceAll("/", "").replaceAll("|", ""),
-    identity: { name: identity },
+    data: data.replaceAll("/", "").replaceAll("|", "").trim(),
+    identity: { name: identity.trim() },
     ranking: $ranking,
     era: $era,
     narrators: $narrators,
