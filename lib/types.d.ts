@@ -13,7 +13,6 @@ declare namespace Lib {
 
   interface ParsedBiographicalEntryFields extends RawBiographicalEntry {
     identity: Identity;
-    // TODO: create ranking, era, type
     ranking?: string | null;
     era?: Era | null;
     narrators?: Array<string> | null;

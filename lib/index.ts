@@ -18,8 +18,7 @@ export function parseBiographicalEntry(
   const { id, data } = biographicalEntry;
 
   const $data = data.split("/");
-  // TODO: add error handling for entries with missing fields
-  // happy-path all fields <identity,ranking,era,and narrators>
+
   const [identity, ranking, era, narrators] = $data;
   const $ranking: string | null = ranking ?? null;
   const $era: Lib.Era | null = era
